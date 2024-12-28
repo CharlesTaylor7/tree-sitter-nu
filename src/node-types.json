@@ -102,7 +102,7 @@
           "named": true
         },
         {
-          "type": "decl_export",
+          "type": "decl_export_env",
           "named": true
         },
         {
@@ -1203,6 +1203,16 @@
     "type": "decl_alias",
     "named": true,
     "fields": {
+      "export": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "export",
+            "named": false
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -1260,6 +1270,16 @@
           {
             "type": "block",
             "named": true
+          }
+        ]
+      },
+      "export": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "export",
+            "named": false
           }
         ]
       },
@@ -1334,7 +1354,7 @@
     }
   },
   {
-    "type": "decl_export",
+    "type": "decl_export_env",
     "named": true,
     "fields": {
       "body": {
@@ -1360,6 +1380,16 @@
           {
             "type": "block",
             "named": true
+          }
+        ]
+      },
+      "export": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "export",
+            "named": false
           }
         ]
       },
@@ -1427,6 +1457,16 @@
           }
         ]
       },
+      "export": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "export",
+            "named": false
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -1467,6 +1507,16 @@
     "type": "decl_use",
     "named": true,
     "fields": {
+      "export": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "export",
+            "named": false
+          }
+        ]
+      },
       "import_pattern": {
         "multiple": false,
         "required": false,
@@ -1938,7 +1988,7 @@
           "named": true
         },
         {
-          "type": "decl_export",
+          "type": "decl_export_env",
           "named": true
         },
         {
@@ -2045,7 +2095,7 @@
           "named": true
         },
         {
-          "type": "decl_export",
+          "type": "decl_export_env",
           "named": true
         },
         {
@@ -2148,7 +2198,7 @@
           "named": true
         },
         {
-          "type": "decl_export",
+          "type": "decl_export_env",
           "named": true
         },
         {
@@ -2952,7 +3002,7 @@
           "named": true
         },
         {
-          "type": "decl_export",
+          "type": "decl_export_env",
           "named": true
         },
         {
@@ -4056,6 +4106,16 @@
           }
         ]
       },
+      "export": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "export",
+            "named": false
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -4358,7 +4418,7 @@
           "named": true
         },
         {
-          "type": "decl_export",
+          "type": "decl_export_env",
           "named": true
         },
         {

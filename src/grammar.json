@@ -78,7 +78,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "decl_export"
+          "name": "decl_export_env"
         },
         {
           "type": "SYMBOL",
@@ -101,8 +101,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "STRING",
-              "value": "export"
+              "type": "FIELD",
+              "name": "export",
+              "content": {
+                "type": "STRING",
+                "value": "export"
+              }
             },
             {
               "type": "BLANK"
@@ -188,8 +192,12 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "STRING",
-                "value": "export"
+                "type": "FIELD",
+                "name": "export",
+                "content": {
+                  "type": "STRING",
+                  "value": "export"
+                }
               },
               {
                 "type": "BLANK"
@@ -423,7 +431,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "decl_export"
+          "name": "decl_export_env"
         },
         {
           "type": "SYMBOL",
@@ -446,8 +454,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "STRING",
-              "value": "export"
+              "type": "FIELD",
+              "name": "export",
+              "content": {
+                "type": "STRING",
+                "value": "export"
+              }
             },
             {
               "type": "BLANK"
@@ -538,8 +550,12 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "STRING",
-                "value": "export"
+                "type": "FIELD",
+                "name": "export",
+                "content": {
+                  "type": "STRING",
+                  "value": "export"
+                }
               },
               {
                 "type": "BLANK"
@@ -2051,8 +2067,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "STRING",
-              "value": "export"
+              "type": "FIELD",
+              "name": "export",
+              "content": {
+                "type": "STRING",
+                "value": "export"
+              }
             },
             {
               "type": "BLANK"
@@ -2121,7 +2141,7 @@
         }
       ]
     },
-    "decl_export": {
+    "decl_export_env": {
       "type": "SEQ",
       "members": [
         {
@@ -2148,8 +2168,12 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "STRING",
-                "value": "export"
+                "type": "FIELD",
+                "name": "export",
+                "content": {
+                  "type": "STRING",
+                  "value": "export"
+                }
               },
               {
                 "type": "BLANK"
@@ -2211,8 +2235,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "STRING",
-              "value": "export"
+              "type": "FIELD",
+              "name": "export",
+              "content": {
+                "type": "STRING",
+                "value": "export"
+              }
             },
             {
               "type": "BLANK"
@@ -2259,8 +2287,12 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "STRING",
-                "value": "export"
+                "type": "FIELD",
+                "name": "export",
+                "content": {
+                  "type": "STRING",
+                  "value": "export"
+                }
               },
               {
                 "type": "BLANK"
