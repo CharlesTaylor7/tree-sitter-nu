@@ -135,7 +135,7 @@ module.exports = grammar({
 
     decl_def: ($) =>
       seq(
-        optional(MODIFIER().visibility),
+        optional(field("export", MODIFIER().visibility)),
         KEYWORD().def,
         repeat($.long_flag),
         field("name", $._command_name),
@@ -150,7 +150,7 @@ module.exports = grammar({
       prec.right(
         1,
         seq(
-          optional(MODIFIER().visibility),
+          optional(field("export", MODIFIER().visibility)),
           KEYWORD().extern,
           field("name", $._command_name),
           field("signature", choice($.parameter_parens, $.parameter_bracks)),
@@ -160,7 +160,7 @@ module.exports = grammar({
 
     decl_module: ($) =>
       seq(
-        optional(MODIFIER().visibility),
+        optional(field("export", MODIFIER().visibility)),
         KEYWORD().module,
         field("name", $._command_name),
         optional(field("body", $.block)),
@@ -170,7 +170,7 @@ module.exports = grammar({
       prec.right(
         1,
         seq(
-          optional(MODIFIER().visibility),
+          optional(field("export", MODIFIER().visibility)),
           KEYWORD().use,
           field("module", choice($.unquoted, $._stringish)),
           optional(field("import_pattern", $.scope_pattern)),
@@ -1453,7 +1453,7 @@ function _block_body_rules(suffix) {
       /** @type {{ [x: string]: string; _command_name?: any; }} */ $,
     ) =>
       seq(
-        optional(MODIFIER().visibility),
+        optional(field("export", MODIFIER().visibility)),
         KEYWORD().alias,
         field("name", $._command_name),
         PUNC().eq,
@@ -1480,7 +1480,7 @@ function _block_body_rules(suffix) {
       prec.right(
         PREC().assignment,
         seq(
-          optional(MODIFIER().visibility),
+          optional(field("export", MODIFIER().visibility)),
           KEYWORD().const,
           $["_assignment_pattern" + suffix],
         ),
