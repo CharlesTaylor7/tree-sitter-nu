@@ -144,7 +144,7 @@ module.exports = grammar({
         field("body", $.block),
       ),
 
-    decl_export: ($) => seq(KEYWORD().export_env, field("body", $.block)),
+    decl_export_env: ($) => seq(KEYWORD().export_env, field("body", $.block)),
 
     decl_extern: ($) =>
       prec.right(
@@ -1438,12 +1438,12 @@ function _block_body_rules(suffix) {
 
     /// Declarations
     ["_declaration" + suffix]: (
-      /** @type {{ [x: string]: string; decl_def?: any; decl_export?: any; decl_extern?: any; decl_module?: any; decl_use?: any; }} */ $,
+      /** @type {{ [x: string]: string; decl_def?: any; decl_export_env?: any; decl_extern?: any; decl_module?: any; decl_use?: any; }} */ $,
     ) =>
       choice(
         alias_for_suffix($, "decl_alias", suffix),
         $.decl_def,
-        $.decl_export,
+        $.decl_export_env,
         $.decl_extern,
         $.decl_module,
         $.decl_use,

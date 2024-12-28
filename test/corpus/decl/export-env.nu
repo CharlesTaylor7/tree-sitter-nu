@@ -7,7 +7,7 @@ export-env {}
 -----
 
 (nu_script
-  (decl_export
+  (decl_export_env
     (block)))
 
 =====
@@ -21,7 +21,7 @@ export-env {
 -----
 
 (nu_script
-  (decl_export
+  (decl_export_env
     (block
       (pipeline
         (pipe_element
